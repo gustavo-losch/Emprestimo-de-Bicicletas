@@ -18,18 +18,21 @@ public class Membro {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getCidade_origem() {
         return cidade_origem;
     }
     public void setCidade_origem(String cidade_origem) {
         this.cidade_origem = cidade_origem;
     }
+
     public Bicicleta getDados_bicicleta() {
         return dados_bicicleta;
     }

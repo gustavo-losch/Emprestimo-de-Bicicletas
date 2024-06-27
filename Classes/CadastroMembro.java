@@ -15,17 +15,16 @@ public class CadastroMembro {
                 operacao = true;
             }
         }
-        if(operacao==true) return true;
-        else return false;
+        return operacao;
     }
 
     //busca membro no vetor de objetos e retorna o objeto referente ao membro
     //se não houver objeto, retorna objeto null
     public static Membro buscaMembroPeloNome(String nome, Membro[] membros){
         Membro vazio = new Membro(null, null, null, null);
-        for (int i = 0; i<membros.length; i++){
-            if (membros[i].getNome().equalsIgnoreCase(nome)){
-                return membros[i];
+        for (Membro membro : membros) {
+            if (membro.getNome().equalsIgnoreCase(nome)) {
+                return membro;
             }
         }
         return vazio;
@@ -34,7 +33,7 @@ public class CadastroMembro {
     //imprime em tela as características dos membros presentes no vetor de objetos
     //para os membros que não existirem, retorna null
     public static void mostraMembros(Membro[] membros){
-        for(int i = 0; i<membros.length; i++){
+        for (int i = 0; i<membros.length; i++){
             System.out.println(" ");
             System.out.println("--- Membro "+i+" ---");
             System.out.println("Matricula: "+membros[i].getMatricula());
