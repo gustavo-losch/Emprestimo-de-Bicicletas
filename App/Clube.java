@@ -22,11 +22,18 @@ public class Clube {
             System.out.println("--- EMPRÉSTIMO DE BICICLETAS ---");
             System.out.println("    Digite o valor da opção:");
             System.out.println(" 1 - Incluir membro.");
+            System.out.println(" 2 - Mostrar membros.");
             System.out.println(" 10 - Encerrar.");
 
             int opt = t.nextInt();
             switch (opt) {
                 case 1:
+                    Bicicleta bicicleta = new Bicicleta(123, "Caloi", 1);
+
+                    Membro membro = new Membro("123","Gustavo", "Porto Alegre", bicicleta);
+                    cadastroMembro.adicionaMembro(membro);
+                break;
+                case 2:
 
                 break;
                 case 10:

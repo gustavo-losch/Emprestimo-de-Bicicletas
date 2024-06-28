@@ -1,21 +1,29 @@
 package Classes;
 public class CadastroMembro {
-    
+
+    private Membro[] membros;
+    private int proximoMembro;
+
     public CadastroMembro(){
-        Membro[] membros = new Membro[10];
+        proximoMembro = 0;
+        membros = new Membro[10];
     }
 
     //adiciona membro no vetor de objetos e retorna se a operação foi realizada ou não
     //revisar cadastro do objeto
-    public static boolean adicionaMembro(Membro[] membros){
+    public boolean adicionaMembro(Membro membro){
         boolean operacao = false;
-        for (int i = 0; i<membros.length; i++){
-            if(membros[i]==null){
-                membros[i] = new Membro(null, null, null, null);
-                operacao = true;
-            }
+        if(proximoMembro < membros.length){
+            membros[proximoMembro++] = membro;
+            System.out.println(" ");
+            System.out.println("Membro adicionado com sucesso!");
+            return true;
         }
-        return operacao;
+        else {
+            System.out.println(" ");
+            System.out.println("Cadastro de Membros Cheio.");
+            return false;
+        }
     }
 
     //busca membro no vetor de objetos e retorna o objeto referente ao membro
