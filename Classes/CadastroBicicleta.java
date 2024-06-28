@@ -27,7 +27,7 @@ public class CadastroBicicleta {
 
     //busca bicicleta no vetor de objetos e retorna o objeto referente à bicicleta
     //se não houver objeto, retorna objeto vazio
-    public Bicicleta buscaBicicletaPeloModelo(int codigo){
+    public Bicicleta buscaBicicletaPeloCodigo(int codigo){
         Bicicleta vazio = new Bicicleta(0, null, 0);
         for (Bicicleta bicicleta : bicicletas) {
             if (bicicleta.getCodigo() == codigo) {

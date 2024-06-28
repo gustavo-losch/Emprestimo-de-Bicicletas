@@ -7,6 +7,7 @@ import Classes.Membro;
 import java.util.Scanner;
 public class Clube {
     public static void main(String[] args) {
+        //criação dos vetores de objetos nos objetos CadastroMembro e CadastroBicicleta
         CadastroMembro cadastroMembro = new CadastroMembro();
         CadastroBicicleta cadastroBicicleta = new CadastroBicicleta();
 
@@ -27,7 +28,7 @@ public class Clube {
 
             int opt = t.nextInt();
             switch (opt) {
-                //indexar a objeto da bicicleta
+                //insere membro e indexa um objeto Bicicleta ao Membro
                 case 1:
                     System.out.println("__ Dados do Membro __ ");
                     t.nextLine();
@@ -40,8 +41,8 @@ public class Clube {
 
                     System.out.printf("Digite o código da bicicleta: ");
                     int codigo_bicicleta = t.nextInt();
-                    
-                    Membro membro = new Membro(matricula, nome, cidade_origem, cadastroBicicleta.buscaBicicletaPeloModelo(codigo_bicicleta));
+
+                    Membro membro = new Membro(matricula, nome, cidade_origem, cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_bicicleta));
                     cadastroMembro.adicionaMembro(membro);
                 break;
                 case 2:
@@ -57,6 +58,7 @@ public class Clube {
 
                 break;
 
+                //insere bicicleta no vetor de objetos bicicletas
                 case 4:
                     System.out.println("__ Dados da Bicicleta __ ");
                     System.out.printf("Digite o codigo: ");
@@ -73,6 +75,7 @@ public class Clube {
                     cadastroBicicleta.adicionaBicicleta(bicicleta);
                 break;
 
+                //encerramento do sistema
                 case 10:
                     System.out.println(" ");
                     System.out.println("Encerrando... Até a próxima :)");
