@@ -54,8 +54,10 @@ public class Clube {
 
                 //erro
                 case 3:
+                    System.out.println(" ");
                     System.out.print("Digite o nome do membro: ");
                     System.out.println(" ");
+                    t.nextLine();
                     String buscar_nome = t.nextLine();
                     cadastroMembro.buscaMembroPeloNome(buscar_nome).imprimir();
 

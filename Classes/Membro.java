@@ -6,7 +6,7 @@ public class Membro {
     private Bicicleta bicicleta;
 
     //construtor do objeto Membro
-    public Membro(String matricula, String nome, String cidade_origem, Bicicleta dados_bicicleta){
+    public Membro(String matricula, String nome, String cidade_origem, Bicicleta bicicleta){
         this.matricula = matricula;
         this.nome = nome;
         this.cidade_origem = cidade_origem;
@@ -28,6 +28,6 @@ public class Membro {
         System.out.println("Matricula: " + this.matricula);
         System.out.println("Nome: " + this.nome);
         System.out.println("Cidade: " + this.cidade_origem);
-        System.out.println("Dados: " + this.bicicleta);
+        System.out.println("Código da Bicicleta: " + bicicleta.getCodigo());
     }
 }
