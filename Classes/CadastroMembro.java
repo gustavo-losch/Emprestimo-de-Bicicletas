@@ -48,7 +48,7 @@ public class CadastroMembro {
                 System.out.println("Matricula: " + membros[i].getMatricula());
                 System.out.println("Nome: " + membros[i].getNome());
                 System.out.println("Cidade: " + membros[i].getCidade_origem());
-                System.out.println("Bicicleta de Código: " + (membros[i].getDados_bicicleta()).getCodigo());
+                System.out.println("Código da Bicicleta alugada: " + membros[i].getDados_bicicleta().getCodigo());
             }
         }
     }
