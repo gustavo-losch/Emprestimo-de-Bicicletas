@@ -28,7 +28,7 @@ public class CadastroMembro {
 
     //busca membro no vetor de objetos e retorna o objeto referente ao membro
     //se não houver objeto, retorna objeto null
-    public static Membro buscaMembroPeloNome(String nome, Membro[] membros){
+    public Membro buscaMembroPeloNome(String nome){
         Membro vazio = new Membro(null, null, null, null);
         for (Membro membro : membros) {
             if (membro.getNome().equalsIgnoreCase(nome)) {
@@ -40,14 +40,16 @@ public class CadastroMembro {
 
     //imprime em tela as características dos membros presentes no vetor de objetos
     //para os membros que não existirem, retorna null
-    public static void mostraMembros(Membro[] membros){
-        for (int i = 0; i<membros.length; i++){
-            System.out.println(" ");
-            System.out.println("--- Membro "+i+" ---");
-            System.out.println("Matricula: "+membros[i].getMatricula());
-            System.out.println("Nome: "+membros[i].getNome());
-            System.out.println("Cidade: "+membros[i].getCidade_origem());
-            System.out.println("Dados Bicicleta: "+membros[i].getDados_bicicleta());
+    public void mostraMembros(){
+        for (int i = 0; i<proximoMembro; i++){
+            if(proximoMembro < membros.length) {
+                System.out.println(" ");
+                System.out.println("--- Membro " + (i + 1) + " ---");
+                System.out.println("Matricula: " + membros[i].getMatricula());
+                System.out.println("Nome: " + membros[i].getNome());
+                System.out.println("Cidade: " + membros[i].getCidade_origem());
+                System.out.println("Bicicleta de Código: " + (membros[i].getDados_bicicleta()).getCodigo());
+            }
         }
     }
 }

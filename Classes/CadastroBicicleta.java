@@ -1,26 +1,33 @@
 package Classes;
 public class CadastroBicicleta {
-    
+
+    private Bicicleta[] bicicletas;
+    private int proximaBicicleta;
+
     public CadastroBicicleta() {
-        Bicicleta[] bicicletas = new Bicicleta[10];
+        proximaBicicleta = 0;
+        bicicletas = new Bicicleta[10];
     }
 
     //adiciona bicicleta no vetor de objetos e retorna se a operação foi realizada ou não
     //revisar cadastro do objeto
-    public static boolean adicionaBicicleta(Bicicleta[] bicicletas){
-        boolean operacao = false;
-        for (int i = 0; i<bicicletas.length; i++){
-            if(bicicletas[i]==null){
-                bicicletas[i] = new Bicicleta(0, null, 0);
-                operacao = true;
-            }
+    public boolean adicionaBicicleta(Bicicleta bicicleta){
+        if(proximaBicicleta < bicicletas.length){
+            bicicletas[proximaBicicleta++] = bicicleta;
+            System.out.println(" ");
+            System.out.println("Bicicleta adicionada com sucesso!");
+            return true;
         }
-        return operacao;
+        else {
+            System.out.println(" ");
+            System.out.println("Cadastro de Bicicletas Cheio.");
+            return false;
+        }
     }
 
     //busca bicicleta no vetor de objetos e retorna o objeto referente à bicicleta
     //se não houver objeto, retorna objeto vazio
-    public static Bicicleta buscaMembroPeloNome(int codigo, Bicicleta[] bicicletas){
+    public Bicicleta buscaBicicletaPeloModelo(int codigo){
         Bicicleta vazio = new Bicicleta(0, null, 0);
         for (Bicicleta bicicleta : bicicletas) {
             if (bicicleta.getCodigo() == codigo) {
@@ -32,7 +39,7 @@ public class CadastroBicicleta {
 
     //imprime em tela as características das bicicletas presentes no vetor de objetos
     //para as bicicletas que não existirem, retorna null
-    public static void mostraBicicletas(Bicicleta[] bicicletas){
+    public void mostraBicicletas(Bicicleta[] bicicletas){
         for(int i = 0; i<bicicletas.length; i++){
             System.out.println(" ");
             System.out.println("--- Membro "+i+" ---");
