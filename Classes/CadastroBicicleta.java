@@ -39,14 +39,18 @@ public class CadastroBicicleta {
 
     //imprime em tela as características das bicicletas presentes no vetor de objetos
     //para as bicicletas que não existirem, retorna null
-    public void mostraBicicletas(Bicicleta[] bicicletas){
-        for(int i = 0; i<bicicletas.length; i++){
+    public void mostraBicicletas(){
+        for(int i = 0; i<proximaBicicleta; i++){
             System.out.println(" ");
-            System.out.println("--- Membro "+i+" ---");
+            System.out.println("--- Bicicleta "+(i+1)+" ---");
             System.out.println("Código: "+bicicletas[i].getCodigo());
             System.out.println("Modelo: "+bicicletas[i].getModelo());
             System.out.println("Quantidade: "+bicicletas[i].getQuantidade());
         }
+    }
+
+    public Bicicleta[] exportaVetor(){
+        return bicicletas;
     }
 
 }

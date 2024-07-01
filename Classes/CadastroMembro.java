@@ -29,13 +29,22 @@ public class CadastroMembro {
     //busca membro no vetor de objetos e retorna o objeto referente ao membro
     //se não houver objeto, retorna objeto null
     public Membro buscaMembroPeloNome(String nome){
-        Membro vazio = new Membro(null, null, null, null);
         for (Membro membro : membros) {
             if (membro.getNome().equalsIgnoreCase(nome)) {
                 return membro;
             }
         }
-        return vazio;
+        return null;
+    }
+
+    //busca membro no vetor de objetos pela matrícula e retorna o objeto referente ao membro
+    public Membro buscaMembroPelaMatricula(String matricula){
+        for (Membro membro : membros) {
+            if (membro.getMatricula().equals(matricula)) {
+                return membro;
+            }
+        }
+        return null;
     }
 
     //imprime em tela as características dos membros presentes no vetor de objetos
@@ -51,5 +60,9 @@ public class CadastroMembro {
                 System.out.println("Código da Bicicleta alugada: " + membros[i].getDados_bicicleta().getCodigo());
             }
         }
+    }
+
+    public Membro[] exportaVetor() {
+        return membros;
     }
 }

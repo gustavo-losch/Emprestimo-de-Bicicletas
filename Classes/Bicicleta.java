@@ -28,4 +28,10 @@ public class Bicicleta {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+
+    public void imprimir(){
+        System.out.println("Código: " + codigo);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Quantidade: " + quantidade);
+    }
 }
