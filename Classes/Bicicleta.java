@@ -29,6 +29,7 @@ public class Bicicleta {
         this.quantidade = quantidade;
     }
 
+    //método toString
     public void imprimir(){
         System.out.println("Código: " + codigo);
         System.out.println("Modelo: " + modelo);

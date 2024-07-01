@@ -64,7 +64,12 @@ public class Clube {
                     System.out.print("Digite o nome do membro: ");
                     System.out.println(" ");
                     String buscar_nome = t.nextLine();
-                    cadastroMembro.buscaMembroPeloNome(buscar_nome).imprimir();
+                    try {
+                        cadastroMembro.buscaMembroPeloNome(buscar_nome).imprimir();
+                    }
+                    catch (NullPointerException e) {
+                        System.out.println("Não existem membros cadastrados com esse nome.");
+                    }
 
                 break;
 
@@ -99,7 +104,12 @@ public class Clube {
                     System.out.print("Digite o código da bicicleta: ");
                     System.out.println(" ");
                     int buscar_codigo = t.nextInt();
-                    cadastroBicicleta.buscaBicicletaPeloCodigo(buscar_codigo).imprimir();
+                    try {
+                        cadastroBicicleta.buscaBicicletaPeloCodigo(buscar_codigo).imprimir();
+                    }
+                    catch (NullPointerException e) {
+                        System.out.println("Não existem bicicletas cadastradas com esse código.");
+                    }
                 break;
 
                 //empresta a bicicleta com base nas bicicletas cadastradas
@@ -107,16 +117,22 @@ public class Clube {
                     t.nextLine();
                     System.out.println(" ");
                     System.out.println("__ Empréstimo de Bicicletas __ ");
-                    System.out.print("Matrícula do Membro: ");
-                    String matricula_emprestimo = t.nextLine();
-                    System.out.print("Código da Bicicleta: ");
-                    int codigo_emprestimo = t.nextInt();
+                    if(contadorBicicletasDisponiveis(cadastroBicicleta,cadastroMembro)>0) {
+                        System.out.print("Matrícula do Membro: ");
+                        String matricula_emprestimo = t.nextLine();
+                        System.out.print("Código da Bicicleta: ");
+                        int codigo_emprestimo = t.nextInt();
 
-                    Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
-                    cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
+                        Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
+                        cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
 
-                    System.out.println(" ");
-                    System.out.println("Bicicleta emprestada com sucesso!");
+                        System.out.println(" ");
+                        System.out.println("Bicicleta emprestada com sucesso!");
+                    }
+                    else {
+                        System.out.println(" ");
+                        System.out.println("Não há bicicletas disponíveis.");
+                    }
                 break;
 
                 //remove a bicicleta do usuário, sobreescrevendo a bicicleta existente como null
@@ -163,7 +179,7 @@ public class Clube {
         //estrutura de repetição encadeada para que todos os elementos dos dois vetores sejam comparados se não forem nulos
         for (int i=0; i<10; i++){
             for(int j=0; j<10; j++){
-                if(bicicletas_existentes[j]!=null && membros_existentes[i]!=null) {
+                if(bicicletas_existentes[j]!=null && membros_existentes[i]!=null && membros_existentes[i].getDados_bicicleta()!=null) {
                     if (bicicletas_existentes[j].getCodigo() == membros_existentes[i].getDados_bicicleta().getCodigo()) {
                         qtd_bicicletas_utilizadas++;
                     }

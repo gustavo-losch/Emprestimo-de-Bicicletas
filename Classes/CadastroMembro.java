@@ -57,11 +57,17 @@ public class CadastroMembro {
                 System.out.println("Matricula: " + membros[i].getMatricula());
                 System.out.println("Nome: " + membros[i].getNome());
                 System.out.println("Cidade: " + membros[i].getCidade_origem());
-                System.out.println("Código da Bicicleta alugada: " + membros[i].getDados_bicicleta().getCodigo());
+                if (membros[i].getDados_bicicleta()!=null) {
+                    System.out.println("Código da Bicicleta alugada: " + membros[i].getDados_bicicleta().getCodigo());
+                }
+                else {
+                    System.out.println("O membro não possui bicicletas alugadas.");
+                }
             }
         }
     }
 
+    //exporta vetor para realizar operações fora da classe
     public Membro[] exportaVetor() {
         return membros;
     }
