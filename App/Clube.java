@@ -113,30 +113,39 @@ public class Clube {
                 break;
 
                 //empresta a bicicleta com base nas bicicletas cadastradas
+                //to do: remover 1 na quantidade de bicicletas quando for eprestada
                 case 7:
-                    t.nextLine();
-                    System.out.println(" ");
-                    System.out.println("__ Empréstimo de Bicicletas __ ");
-                    if(contadorBicicletasDisponiveis(cadastroBicicleta,cadastroMembro)>0) {
-                        System.out.print("Matrícula do Membro: ");
-                        String matricula_emprestimo = t.nextLine();
-                        System.out.print("Código da Bicicleta: ");
-                        int codigo_emprestimo = t.nextInt();
-
-                        Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
-                        cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
-
+                    try {
+                        t.nextLine();
                         System.out.println(" ");
-                        System.out.println("Bicicleta emprestada com sucesso!");
+                        System.out.println("__ Empréstimo de Bicicletas __ ");
+                        if(contadorBicicletasDisponiveis(cadastroBicicleta,cadastroMembro)>0) {
+                            System.out.print("Matrícula do Membro: ");
+                            String matricula_emprestimo = t.nextLine();
+                            System.out.print("Código da Bicicleta: ");
+                            int codigo_emprestimo = t.nextInt();
+
+                            Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
+                            cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
+
+                            System.out.println(" ");
+                            System.out.println("Bicicleta emprestada com sucesso!");
+                        }
+                        else {
+                            System.out.println(" ");
+                            System.out.println("Não há bicicletas disponíveis.");
+                        }
                     }
-                    else {
+                    catch (NullPointerException e) {
                         System.out.println(" ");
-                        System.out.println("Não há bicicletas disponíveis.");
+                        System.out.println("Matricula ou Código não existente.");
                     }
                 break;
 
                 //remove a bicicleta do usuário, sobreescrevendo a bicicleta existente como null
+                // to do: adicionar 1 na quantidade de bicicletas quando a bicicleta for devolvida
                 case 8:
+                    try {
                     t.nextLine();
                     System.out.println(" ");
                     System.out.println("__ Devolução de Bicicletas __ ");
@@ -147,6 +156,11 @@ public class Clube {
 
                     System.out.println(" ");
                     System.out.println("Bicicleta devolvida com sucesso!");
+                    }
+                    catch (NullPointerException e) {
+                        System.out.println(" ");
+                        System.out.println("A matrícula não existe.");
+                    }
                 break;
 
                 //mostra a quantidade de bicicletas disponíveis para empréstimo (não vinculadas a membros)
