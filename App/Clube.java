@@ -113,23 +113,34 @@ public class Clube {
                 break;
 
                 //empresta a bicicleta com base nas bicicletas cadastradas
-                //to do: remover 1 na quantidade de bicicletas quando for eprestada
+                // to do: verificar se a bicicleta já está alugada por alguém (criar método com for de comparação)
                 case 7:
                     try {
                         t.nextLine();
                         System.out.println(" ");
                         System.out.println("__ Empréstimo de Bicicletas __ ");
+                        //verifica se existem bicicletas disponíveis
                         if(contadorBicicletasDisponiveis(cadastroBicicleta,cadastroMembro)>0) {
                             System.out.print("Matrícula do Membro: ");
                             String matricula_emprestimo = t.nextLine();
-                            System.out.print("Código da Bicicleta: ");
-                            int codigo_emprestimo = t.nextInt();
-
-                            Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
-                            cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
-
-                            System.out.println(" ");
-                            System.out.println("Bicicleta emprestada com sucesso!");
+                            //verifica se o membro não possui bicicletas alugadas
+                            if (cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).getDados_bicicleta()==null){
+                                System.out.print("Código da Bicicleta: ");
+                                int codigo_emprestimo = t.nextInt();
+    
+                                Bicicleta bicicleta_emprestada = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo);
+                                cadastroMembro.buscaMembroPelaMatricula(matricula_emprestimo).setDados_bicicleta(bicicleta_emprestada);
+                                
+                                int quantidade_existente = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo).getQuantidade();
+                                cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_emprestimo).setQuantidade(quantidade_existente-1);
+    
+                                System.out.println(" ");
+                                System.out.println("Bicicleta emprestada com sucesso!");
+                            }
+                            else {
+                                System.out.println(" ");
+                                System.out.println("O membro já tem uma bicicleta alugada.");
+                            }
                         }
                         else {
                             System.out.println(" ");
@@ -143,7 +154,7 @@ public class Clube {
                 break;
 
                 //remove a bicicleta do usuário, sobreescrevendo a bicicleta existente como null
-                // to do: adicionar 1 na quantidade de bicicletas quando a bicicleta for devolvida
+                //to do: verificar se o membro tem bicicletas alugadas
                 case 8:
                     try {
                     t.nextLine();
@@ -152,6 +163,10 @@ public class Clube {
                     System.out.print("Matrícula do Membro: ");
                     String matricula_devolucao = t.nextLine();
 
+                    int codigo_devolucao = cadastroMembro.buscaMembroPelaMatricula(matricula_devolucao).getDados_bicicleta().getCodigo();
+                    int quantidade_existente = cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_devolucao).getQuantidade();
+                    cadastroBicicleta.buscaBicicletaPeloCodigo(codigo_devolucao).setQuantidade(quantidade_existente+1);
+                    
                     cadastroMembro.buscaMembroPelaMatricula(matricula_devolucao).setDados_bicicleta(null);
 
                     System.out.println(" ");
