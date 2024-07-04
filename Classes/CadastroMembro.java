@@ -12,7 +12,6 @@ public class CadastroMembro {
     //adiciona membro no vetor de objetos e retorna se a operação foi realizada ou não
     //revisar cadastro do objeto
     public boolean adicionaMembro(Membro membro){
-        boolean operacao = false;
         if(proximoMembro < membros.length){
             membros[proximoMembro++] = membro;
             System.out.println(" ");
