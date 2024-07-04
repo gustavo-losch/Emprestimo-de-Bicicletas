@@ -12,17 +12,17 @@ Agora passo a palavra para nosso grande programador Gustavo Losch
 
 ### Desenvolvimento | (4 min)
 
-    Na etapa de desenvolvimento, construimos o software seguindo uma estrutura hierárquica de classes, das quais temos uma classe principal, duas classes que fazem operações com objetos e dois objetos. Para o desenvolvimento do projeto, os objetos utilizados foram Membro, que armazena características importantes dos membros do clube e Bicicleta, que armazena dados como quantidade e modelo da bicicleta utilizada pelo clube. Já as classes que fazem operações com os objetos, que são CadastroMembro e CadastroBiciceta, armazenam o conjunto de objetos em vetores e operam os dados nos vetores. Por fim, a classe Clube executa o método main de nosso software, dessa forma, acaba interligando as demais classes e fazendo uma ponte entre usuário e programa.
+Na etapa de desenvolvimento, construimos o software seguindo uma estrutura hierárquica de classes, das quais temos uma classe principal, duas classes que fazem operações com objetos e dois objetos. Para o desenvolvimento do projeto, os objetos utilizados foram Membro, que armazena características importantes dos membros do clube e Bicicleta, que armazena dados como quantidade e modelo da bicicleta utilizada pelo clube. Já as classes que fazem operações com os objetos, que são CadastroMembro e CadastroBiciceta, armazenam o conjunto de objetos em vetores e operam os dados nos vetores. Por fim, a classe Clube executa o método main de nosso software, dessa forma, acaba interligando as demais classes e fazendo uma ponte entre usuário e programa.
 
     A aplicaçao desenvolvida também consta com diversas funcionalidades, sendo as principais delas: incluir membros no vetor de objetos, incluir bicicletas no vetor de objetos e emprestar bicicleta ao membro. Durante o desenvolvimento do software, nos deparamos com diversos erros na execução do código, o principal erro encontrado foi o "NullPointerException", o qual significa, em nosso contexto, que foi tentado acessar as informações de um objeto que não existe. Em nosso caso, tanto o vetor de objetos de membros quanto o de bicicletas eram inicializados apenas com elementos nulos e, a medida que fosse sendo preenchido, os valores nulos deixariam de existir. Portanto, foi criada uma regra de excessão utilizando um if simples que somente realizaria operações se o objeto lido não fosse nulo.
 
-    Além disso, construimos dois métodos adicionais na classe Clube, os quais fazem respectivamente a contagem de bicicletas disponíveis para o aluguel e a checagem de disponibilidade da bicicleta requisitada para aluguel. A seguir, mostrarei um pouco do funcionamento de nossa aplicação, junto a informações úteis referentes ao projeto.
+Além disso, construimos dois métodos adicionais na classe Clube, os quais fazem respectivamente a contagem de bicicletas disponíveis para o aluguel e a checagem de disponibilidade da bicicleta requisitada para aluguel. A seguir, mostrarei um pouco do funcionamento de nossa aplicação, junto a informações úteis referentes ao projeto.
 
 >     Mostrar código e excução no terminal. Mostrar fluxograma do trabalho no tldraw.
 
 ### Conclusões | (1 min)
 
-    Então, concluimos que alguns aspectos foram fundamentais no desenvolvimento do projeto para garantir a execução limpa e organizada das tarefas exigidas pelo trabalho. Alguns desses aspectos foram:
+Então, concluimos que alguns aspectos foram fundamentais no desenvolvimento do projeto para garantir a execução limpa e organizada das tarefas exigidas pelo trabalho. Alguns desses aspectos foram:
 
 * Organização: organizar o código foi fundamental para melhorar a eificiência do grupo.
 * Documentação: os comentários no código foram fundamentais para o melhor entendimento das estratégias lógicas utilizadas no projeto pelos integrantes do grupo.
