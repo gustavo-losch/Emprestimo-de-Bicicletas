@@ -12,7 +12,7 @@ A aplicação elaborada tem como objetivo **gerenciar um clube de empréstimo de
 
 As operações presentes no software foram cuidadosamente elaboradas para que nenhum erro cometido pelo usuário, como inserir valores errados, afete o funcionamento do sistema. Para que isso fosse possível, o grupo utilizou métodos de tratamento de excessões, como estruturas de "try / catch" e estruturas "if". Segue abaixo um exemplo:
 
-~~~Java
+```Java
 int buscar_codigo = t.nextInt();
 try {
     cadastroBicicleta.buscaBicicletaPeloCodigo(buscar_codigo).imprimir();
@@ -20,28 +20,28 @@ try {
 catch (NullPointerException e) {
     System.out.println("Não existem bicicletas cadastradas com esse código.");
 }
-~~~
+```
 
 *Segue abaixo a lista de operações possíveis de se fazer com a aplicação:*
 
 1. **Inserir Membros**
-1. **Mostrar Membros**
-1. **Buscar Membro por Nome**
-1. **Inserir Bicicleta**
-1. **Mostar Bicicletas**
-1. **Buscar Bicicleta por Código**
-1. **Emprestar Bicicleta**
-1. **Devolver Bicicleta**
-1. **Quantidade de Bicicletas Disponíveis**
-1. **Encerrar**
+2. **Mostrar Membros**
+3. **Buscar Membro por Nome**
+4. **Inserir Bicicleta**
+5. **Mostar Bicicletas**
+6. **Buscar Bicicleta por Código**
+7. **Emprestar Bicicleta**
+8. **Devolver Bicicleta**
+9. **Quantidade de Bicicletas Disponíveis**
+10. **Encerrar**
 
- ---
+---
 
 ### ***Lições Aprendidas:***
 
 Diversas lições foram aprendidas em múltiplos âmbitos durante a elaboração do trabalho. Logo no início do trabalho, o grupo entendeu que, por se tratar de uma aplicação relativamente grande, a organização era fundamental para se obter um bom trabalho em equipe e para que ninguém ficasse para trás. Aprendemos também, que a comunicação precisa, com o intuito de explicar o funcionamento de algo, entre os integrantes era essencial, uma vez que foi necessário explicar o funcionamento do que cada um fez. Como solução para a organização do projeto, decidimos utilizar o software de versionamento "git", além de comentar os pontos mais importantes do código.
 
-<img src="Other/Git Log.png" width="250" height="">
+<img src="Other/Git Log.png" width="170" height="">
 
 *Árvore de organização do projeto. &uarr;*
 
@@ -56,6 +56,7 @@ Além disso, também nos deparamos com o erro __**"InputMismatchException"**__, 
 ---
 
 ##### *Referências:*
+
 * Link do Repositório no GitHub - (https://github.com/gustavo-losch/Emprestimo-de-Bicicletas)
 * Link do Fluxograma - (https://www.tldraw.com/ro/q03HKX6XuAmryNxuVFGRp?v=-473,97,2728,1385&p=sc4ZYX7zrPZK9jlxcH1YJ)
 * Oracle Documentation | Erros - (https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html)
