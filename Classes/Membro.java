@@ -28,6 +28,11 @@ public class Membro {
         System.out.println("Matricula: " + this.matricula);
         System.out.println("Nome: " + this.nome);
         System.out.println("Cidade: " + this.cidade_origem);
-        System.out.println("Código da Bicicleta: " + bicicleta.getCodigo());
+        if (bicicleta!=null) {
+            System.out.println("Código da Bicicleta alugada: " + bicicleta.getCodigo());
+        }
+        else {
+            System.out.println("O membro não possui bicicletas alugadas.");
+        }
     }
 }

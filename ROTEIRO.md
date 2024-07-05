@@ -29,3 +29,9 @@ Então, concluimos que alguns aspectos foram fundamentais no desenvolvimento do 
 * Versionamento: a organização das versões de nosso programa utilizando o git nos permitiu trabalhar em equipe de forma organizada e rastreada.
 
 Portanto, a realização do trabalho nos gerou um grande aprendizado técnico acerca das funcionalidades da linguagem Java, além de proporcionar conhecimentos muito importantes referentes a melhoria de eficiência ao trabalhar em equipe.
+
+---
+
+##### *Referências:*
+* Stack Overflow | Erros - (https://pt.stackoverflow.com/questions/63617/o-que-%C3%A9-a-nullpointerexception-e-quais-s%C3%A3o-suas-principais-causas)
+* DevMedia | Excessões - (https://www.devmedia.com.br/blocos-try-catch/7339)
