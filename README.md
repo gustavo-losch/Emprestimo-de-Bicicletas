@@ -3,6 +3,8 @@
 *Guilherme Sanches Cavazzotto () e Gustavo Lösch do Amaral (241065200)*
 
 > A seguinte aplicação foi elaborada como trabalho final na disciplina de Fundamentos de Programação na PUCRS.
+>
+> Link do Vídeo de Apresentação - (https://youtu.be/b3_F7KVp6P4)
 
 ---
 
@@ -30,8 +32,6 @@ catch (NullPointerException e) {
 
 <br>
 
-<br>
-
 *Segue abaixo a lista de operações possíveis de se fazer com a aplicação:*
 
 1. **Inserir Membros**
@@ -51,7 +51,7 @@ catch (NullPointerException e) {
 
 Diversas lições foram aprendidas em múltiplos âmbitos durante a elaboração do trabalho. Logo no início do trabalho, o grupo entendeu que, por se tratar de uma aplicação relativamente grande, a organização era fundamental para se obter um bom trabalho em equipe e para que ninguém ficasse para trás. Aprendemos também, que a comunicação precisa, com o intuito de explicar o funcionamento de algo, entre os integrantes era essencial, uma vez que foi necessário explicar o funcionamento do que cada um fez. Como solução para a organização do projeto, decidimos utilizar o software de versionamento "git", além de comentar os pontos mais importantes do código.
 
-<img src="Other/Git Log.png" width="170" height="">
+<img src="Git Log.png" width="170" height="">
 
 *Árvore de organização do projeto. &uarr;*
 
