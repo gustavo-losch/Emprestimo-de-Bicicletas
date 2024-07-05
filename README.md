@@ -1,6 +1,6 @@
 # Empréstimo de Bicicletas
 
-*Guilherme Sanches Cavazzotto e Gustavo Lösch do Amaral*
+*Guilherme Sanches Cavazzotto () e Gustavo Lösch do Amaral (241065200)*
 
 > A seguinte aplicação foi elaborada como trabalho final na disciplina de Fundamentos de Programação na PUCRS.
 
@@ -21,6 +21,16 @@ catch (NullPointerException e) {
     System.out.println("Não existem bicicletas cadastradas com esse código.");
 }
 ```
+
+*<br>*
+
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 *Segue abaixo a lista de operações possíveis de se fazer com a aplicação:*
 
@@ -58,7 +68,7 @@ Além disso, também nos deparamos com o erro __**"InputMismatchException"**__, 
 ##### *Referências:*
 
 * Link do Repositório no GitHub - (https://github.com/gustavo-losch/Emprestimo-de-Bicicletas)
-* Link do Fluxograma - (https://www.tldraw.com/ro/q03HKX6XuAmryNxuVFGRp?v=-473,97,2728,1385&p=sc4ZYX7zrPZK9jlxcH1YJ)
+* Link do Fluxograma - (https://www.tldraw.com/r/fmIxcLgRhRuJqkQuYGxa1?v=-472,-93,3637,1726&p=sc4ZYX7zrPZK9jlxcH1YJ)
 * Oracle Documentation | Erros - (https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html)
 * Stack Overflow | Erros - (https://pt.stackoverflow.com/questions/63617/o-que-%C3%A9-a-nullpointerexception-e-quais-s%C3%A3o-suas-principais-causas)
 * DevMedia | Excessões - (https://www.devmedia.com.br/blocos-try-catch/7339)
