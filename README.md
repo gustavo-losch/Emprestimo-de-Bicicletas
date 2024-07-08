@@ -1,6 +1,6 @@
 # Empréstimo de Bicicletas
 
-*Guilherme Sanches Cavazzotto () e Gustavo Lösch do Amaral (241065200)*
+*Guilherme Sanches Cavazzotto (24102295) e Gustavo Lösch do Amaral (241065200)*
 
 > A seguinte aplicação foi elaborada como trabalho final na disciplina de Fundamentos de Programação na PUCRS.
 >
@@ -23,14 +23,6 @@ catch (NullPointerException e) {
     System.out.println("Não existem bicicletas cadastradas com esse código.");
 }
 ```
-
-*<br>*
-
-<br>
-
-<br>
-
-<br>
 
 *Segue abaixo a lista de operações possíveis de se fazer com a aplicação:*
 
