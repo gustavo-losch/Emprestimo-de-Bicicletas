@@ -12,7 +12,7 @@
 
 A aplicação elaborada tem como objetivo **gerenciar um clube de empréstimo de bicicletas**, relizando diversos tipos de operações entre os objetos cadastrados. O projeto foi estruturado de maneira hierárquica, dessa forma, a complexidade de interpretação do código foi reduzida. A criação de 5 classes foi necesária para a realização do projeto, sendo uma delas a aplicação principal (Clube), dois objetos (Membro e Bicicleta) e duas classes complementares (CadastroMembro e CadastroBicicleta) que realizam operações com os objetos.
 
-As operações presentes no software foram cuidadosamente elaboradas para que nenhum erro cometido pelo usuário, como inserir valores errados, afete o funcionamento do sistema. Para que isso fosse possível, o grupo utilizou métodos de tratamento de excessões, como estruturas de "try / catch" e estruturas "if". Segue abaixo um exemplo:
+As operações presentes no software foram cuidadosamente elaboradas para que nenhum erro cometido pelo usuário, como inserir valores errados, afete o funcionamento do sistema. Para que isso fosse possível, o grupo utilizou métodos de tratamento de exceções, como estruturas de "try / catch" e estruturas "if". Segue abaixo um exemplo:
 
 ```Java
 int buscar_codigo = t.nextInt();
@@ -51,9 +51,9 @@ Diversas lições foram aprendidas em múltiplos âmbitos durante a elaboração
 
 ### ***Dificuldades Encontradas:***
 
-Encontramos diversos desafios durante o processo de desenvolvimento da aplicação. O primeiro problema encontrado refere-se a um erro __**"NullPointerException"**__, o qual significa, em nosso contexto, que foi tentado acessar as informações de um objeto que não existe. Em nosso caso, tanto o vetor de objetos de membros quanto o de bicicletas eram inicializados apenas com elementos nulos e, a medida que fosse sendo preenchido, os valores nulos deixariam de existir. Portanto, foi criada uma regra de excessão utilizando um if simples que somente realizaria operações se o objeto lido não fosse nulo.
+Encontramos diversos desafios durante o processo de desenvolvimento da aplicação. O primeiro problema encontrado refere-se a um erro __**"NullPointerException"**__, o qual significa, em nosso contexto, que foi tentado acessar as informações de um objeto que não existe. Em nosso caso, tanto o vetor de objetos de membros quanto o de bicicletas eram inicializados apenas com elementos nulos e, a medida que fosse sendo preenchido, os valores nulos deixariam de existir. Portanto, foi criada uma regra de exceção utilizando um if simples que somente realizaria operações se o objeto lido não fosse nulo.
 
-Além disso, também nos deparamos com o erro __**"InputMismatchException"**__, o qual se refere a um erro de diferença entre o input recebido e o input esperado pelo Scanner. Para solucionar o problema, utilizamos o tratamento de excessão por  __**"try / catch"**__. Alguns pequenos erros de lógica também foram encontrados, e para solucionarmos, desenhamos um fluxograma do programa que nos ajudou a entender como deveriamos agir.
+Além disso, também nos deparamos com o erro __**"InputMismatchException"**__, o qual se refere a um erro de diferença entre o input recebido e o input esperado pelo Scanner. Para solucionar o problema, utilizamos o tratamento de exceção por  __**"try / catch"**__. Alguns pequenos erros de lógica também foram encontrados, e para solucionarmos, desenhamos um fluxograma do programa que nos ajudou a entender como deveriamos agir.
 
 ---
 
@@ -63,4 +63,4 @@ Além disso, também nos deparamos com o erro __**"InputMismatchException"**__, 
 * Link do Fluxograma - (https://www.tldraw.com/r/fmIxcLgRhRuJqkQuYGxa1?v=-472,-93,3637,1726&p=sc4ZYX7zrPZK9jlxcH1YJ)
 * Oracle Documentation | Erros - (https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html)
 * Stack Overflow | Erros - (https://pt.stackoverflow.com/questions/63617/o-que-%C3%A9-a-nullpointerexception-e-quais-s%C3%A3o-suas-principais-causas)
-* DevMedia | Excessões - (https://www.devmedia.com.br/blocos-try-catch/7339)
+* DevMedia | Exceções - (https://www.devmedia.com.br/blocos-try-catch/7339)
